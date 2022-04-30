@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'gestor-ui';
+  lancamentos = [ 
+  {dataVencimento: '12/12/12', pessoa:'gui', descricao:'descricao', valor:'1000', dataPagamento:null, tipo:'DESPESA'},
+    {dataVencimento: '12/12/12', pessoa:'gui', descricao:'descricao', valor:'1000', dataPagamento:'12/21/2003', tipo:'CREDITO'}
+
+  ];
 }

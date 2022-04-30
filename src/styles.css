@@ -1,1 +1,49 @@
-/* You can add global styles to this file, and also import other style files */
+
+body{
+    font-family: Arial, Verdana, sans-serif;
+    color: #404C51;
+}
+
+label {
+    font-weight: bold;
+   
+}
+
+#labelAte{
+    margin: 0 .5em;
+}
+
+@media (min-width: 1200px){
+.container {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.col-valor-header {
+    width: 120px;
+    text-align: center !important;
+}
+  
+.col-valor-content {
+	text-align: center !important;
+}
+  
+.col-data-header {
+    width: 120px;
+}
+  
+.col-data-content {
+    text-align: center;
+}
+
+.col-acoes {
+    width: 120px !important;
+    text-align: center !important;
+    
+}
+
+.col-acoes > a {
+    margin-right: 5px;
+}
+
+}
