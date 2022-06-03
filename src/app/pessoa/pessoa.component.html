@@ -1,0 +1,66 @@
+<div class="container">
+    <div class="grid">
+  
+      <div class="col-12">
+        <h1>Pessoas</h1>
+      </div>
+  
+      <div class="col-12 p-fluid">
+        <label>Nome</label>
+        <input pInputText type="text">
+    </div>
+
+      <div class="col-12">
+          <button pButton type="submit" label="Pesquisar" ></button>
+      </div>
+  
+    </div>
+  
+      <div class="grid">
+        <div class="col-12">
+            <p-table [value]="pessoas" [paginator]="true" [rows]="5" [responsive]="true" styleClass="p-datatable-gridlines p-datatable-striped">
+              <ng-template pTemplate="header">
+                <tr>
+                  <th>Nome</th>
+                  <th>Cidade</th>
+                  <th>Estado</th>
+                  <th>Status</th>
+                  <th></th>
+                </tr>
+              </ng-template>
+              <ng-template pTemplate="body" let-pessoa>
+                <tr>
+                  <td>{{ pessoa.nome }}
+                    <span class="p-column-title">Nome</span>
+                  </td>
+                  <td>{{ pessoa.cidade }}
+                    <span class="p-column-title">Cidade</span>
+                  </td>
+                  <td class="col-data-content">{{ pessoa.estado }}
+                    <span class="p-column-title">Estado</span>
+                  </td>
+                  <td class="col-valor-content" > <a href="javascript:;" [ngStyle]="{ color: pessoa.ativo === false ? 'red' : 'blue'}" [pTooltip] = "pessoa.ativo ? 'Desativar' : 'Ativar'">{{ pessoa.ativo ? 'Ativo' : 'Inativo' }}</a>
+                    <span class="p-column-title">Status</span>
+                  </td>
+                   
+                  <td class="col-acoes">
+                    <a pButton icon="pi pi-pencil" pTooltip="Editar" tooltipPosition="top"></a>
+                    <button pButton icon="pi pi-trash" pTooltip="Excluir" tooltipPosition="top"></button>
+                  </td>
+                </tr>
+                
+              </ng-template>
+              <tr>
+                <ng-template pTemplate="body"> </ng-template>
+              </tr>
+            </p-table>
+          
+        </div>
+        <div class="col-12">
+          <a pButton label="Nova Pessoa"></a>
+        </div>
+  
+      </div>
+  
+    
+  </div>
